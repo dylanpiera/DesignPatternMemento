@@ -10,13 +10,17 @@ namespace Program
 
         public void Save(Editor editor)
         {
-            Console.WriteLine("-- Saving ---");
+            Console.WriteLine("-- Saving ---"); // For demo purposes
             BackupHistory.Add(editor.CreateMemento());
         }
 
         public void Undo()
         {
-            BackupHistory[BackupHistory.Count - 1].RestoreMemento();
+            if (BackupHistory.Count > 0)
+            {
+                BackupHistory[BackupHistory.Count - 1].RestoreMemento();
+                BackupHistory.RemoveAt(BackupHistory.Count - 1);
+            }
         }
     }
     #endregion

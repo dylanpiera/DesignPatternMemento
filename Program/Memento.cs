@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Program
 {
@@ -6,21 +7,20 @@ namespace Program
     public class Memento
     {
         private Editor editor;
-        private string text;
-        private ConsoleColor textColor;
+        private List<object> objects = new List<object>();
 
-        public Memento(Editor editor, string text, ConsoleColor textColor)
+        public Memento(Editor editor, params object[] args)
         {
             this.editor = editor;
-            this.text = text;
-            this.textColor = textColor;
+            foreach (var obj in args)
+            {
+                objects.Add(obj);
+            }
         }
 
         public void RestoreMemento()
         {
-            Console.WriteLine("-- Undoing --");
-            editor.Text = text;
-            editor.TextColor = textColor;
+            editor.RestoreMemento(objects.ToArray());
         }
     }
     #endregion

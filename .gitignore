@@ -215,3 +215,7 @@ FakesAssemblies/
 **/*.Server/GeneratedArtifacts
 **/*.Server/ModelManifest.xml
 _Pvt_Extensions
+
+Program/package_designTimeBuild\.binlog
+
+Program/package_fullBuild\.binlog
