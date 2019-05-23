@@ -5,11 +5,11 @@
 
 
 The underlaying classes:
-```cs --editable false --source-file ./Program/Editor.cs --project ./Program/Program.csproj --region Editor --session 2
+```cs --source-file ./Program/Editor.cs --project ./Program/Program.csproj --region Editor --session 2
 ```
-```cs --editable false --source-file ./Program/Memento.cs --project ./Program/Program.csproj --region Memento --session 2
+```cs --source-file ./Program/Memento.cs --project ./Program/Program.csproj --region Memento --session 2
 ```
-```cs --editable false --source-file ./Program/Caretaker.cs --project ./Program/Program.csproj --region Caretaker --session 2
+```cs --source-file ./Program/Caretaker.cs --project ./Program/Program.csproj --region Caretaker --session 2
 ```
 
 ## Empty Page?
